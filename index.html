@@ -1,257 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Business Systems Audit | Jeal.AI</title>
-  <meta name="description" content="Uncover the hidden leaks costing your business revenue. Free 2-minute diagnostic with instant results.">
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeal.AI — Your Business on Autopilot</title>
+<meta name="description" content="Custom AI automations that speak your business's language. Start with a free 2-minute Systems Audit.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="css/core.css">
+<link rel="stylesheet" href="css/variants.css">
 </head>
-<body>
+<body data-variant="operator">
 
-  <!-- NAVBAR -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <img src="images/logo.png" alt="Jeal.AI" class="logo-img">
-      </a>
-      <a href="#audit" class="nav-audit-cta">Run Free Audit</a>
+<!-- ── NAV ── -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo"><img src="images/logo.png" alt="Jeal.AI" style="width: 120px; height: 68px; object-fit: contain;"></a>
+    <div class="nav-actions">
+      <a href="#" class="nav-touch" data-open-popup>Get in touch</a>
+      <a href="#audit" class="nav-cta">Run Free Audit</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="hero-grid"></div>
-      <div class="hero-glow hero-glow--1"></div>
-      <div class="hero-glow hero-glow--2"></div>
-      <div class="hero-glow hero-glow--3"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge reveal">FREE BUSINESS AUDIT</div>
-      <h1 class="hero-headline reveal reveal-delay-1">
-        Uncover the Hidden Leaks<br>Costing Your Business<br><span id="rotating-word" class="rotating-word">Revenue</span>
-      </h1>
-      <p class="hero-sub reveal reveal-delay-2">
-        Get a clear breakdown of where leads, sales, and operations are leaking<br>plus fixes you can use today.
-      </p>
-      <a href="#audit" class="btn-primary reveal reveal-delay-3">
-        Run My Free Audit <span class="btn-arrow">→</span>
-      </a>
-      <p class="hero-meta reveal reveal-delay-3">2–3 minutes &nbsp;·&nbsp; Results shown instantly &nbsp;·&nbsp; No sales call required</p>
-    </div>
-  </section>
+<!-- ═══════════════ HERO — 3 variants ═══════════════ -->
 
-  <!-- PROBLEM -->
-  <section class="problem" id="problem">
-    <div class="container">
-      <div class="section-label reveal">THE COST OF THE STATUS QUO</div>
-      <h2 class="section-title reveal reveal-delay-1">Most businesses are losing revenue<br>in the same three places</h2>
-      <div class="problem-grid">
-        <div class="problem-card reveal reveal-delay-1">
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-            </svg>
-          </div>
-          <h3>Leads go cold</h3>
-          <p>New inquiries sit for hours or days. By the time someone follows up, the deal is gone. Every missed response is money that went somewhere else.</p>
-        </div>
-        <div class="problem-card reveal reveal-delay-2">
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
-            </svg>
-          </div>
-          <h3>No clear picture</h3>
-          <p>You don't know where leads drop off, which reps convert, or what's actually working. Decisions get made on gut feel instead of data.</p>
-        </div>
-        <div class="problem-card reveal reveal-delay-3">
-          <div class="problem-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3>Your team is the system</h3>
-          <p>Wasted time, unproductive staff, and too many disconnected tools. Everything runs on memory and people. One busy week breaks everything.</p>
-        </div>
+<!-- OPERATOR -->
+<section class="hero" id="top" data-hero="operator">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-grid"></div>
+    <svg class="hero-circuit" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice">
+      <path d="M0,120 L260,120 L300,160 L540,160 L580,120 L820,120"/>
+      <path d="M0,300 L180,300 L220,340 L420,340 L460,300 L700,300"/>
+      <path d="M0,500 L300,500 L340,540 L580,540 L620,500 L860,500"/>
+      <path d="M1400,180 L1140,180 L1100,220 L900,220"/>
+      <path d="M1400,420 L1180,420 L1140,380 L960,380"/>
+      <circle cx="820" cy="120" r="4"/>
+      <circle cx="700" cy="300" r="4"/>
+      <circle cx="860" cy="500" r="4"/>
+      <circle cx="900" cy="220" r="4"/>
+      <circle cx="960" cy="380" r="4"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal"><span class="dot"></span> Free Systems Audit</div>
+    <h1 class="hero-headline reveal reveal-d1">
+      Find the hidden leaks<br>costing your business<br><em><span id="rotating-word">Efficiency</span></em>
+    </h1>
+    <p class="hero-sub reveal reveal-d2">
+      Get a clear breakdown of where leads, sales, and operations are slipping, plus the fixes you can use today.
+    </p>
+    <div class="hero-actions reveal reveal-d3">
+      <a href="#audit" class="btn btn--primary">Run my free audit <span class="btn__arrow">→</span></a>
+      <a href="#" class="btn btn--ghost" data-open-popup>Or get in touch</a>
+    </div>
+    <p class="hero-meta reveal reveal-d3">2–3 minutes · Results shown instantly · No sales call required</p>
+  </div>
+</section>
+
+<!-- CIRCUIT -->
+<section class="hero hidden" data-hero="circuit">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <svg class="hero-circuit" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice">
+      <path d="M0,120 L260,120 L300,160 L540,160 L580,120 L820,120"/>
+      <path d="M0,300 L180,300 L220,340 L420,340 L460,300 L700,300"/>
+      <path d="M0,500 L300,500 L340,540 L580,540 L620,500 L860,500"/>
+      <path d="M1400,180 L1140,180 L1100,220 L900,220"/>
+      <path d="M1400,420 L1180,420 L1140,380 L960,380"/>
+      <circle cx="820" cy="120" r="4"/>
+      <circle cx="700" cy="300" r="4"/>
+      <circle cx="860" cy="500" r="4"/>
+      <circle cx="900" cy="220" r="4"/>
+      <circle cx="960" cy="380" r="4"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-chip"><span class="dot"></span> System diagnostic · v2</div>
+    <h1 class="hero-headline">
+      Your business leaks <em>revenue</em>.<br>We find where.
+    </h1>
+    <p class="hero-sub">
+      A 10-question diagnostic built from 200+ audits. We map your pipeline leaks in real time, score them, and hand you the fix list.
+    </p>
+    <div class="hero-actions">
+      <a href="#audit" class="btn btn--primary">Start diagnostic <span class="btn__arrow">→</span></a>
+      <a href="#" class="btn btn--ghost" data-open-popup>Or get in touch</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">10</div><div class="hero-stat-lbl">Questions</div></div>
+      <div><div class="hero-stat-num">~2m</div><div class="hero-stat-lbl">Time</div></div>
+      <div><div class="hero-stat-num">$0</div><div class="hero-stat-lbl">To run</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLTAGE -->
+<section class="hero hidden" data-hero="voltage">
+  <div class="hero-bg">
+    <div class="hero-glow hero-glow--1"></div>
+    <div class="hero-glow hero-glow--2"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Your business on autopilot</div>
+    <h1 class="hero-headline">
+      Stop losing<br><em>revenue</em><br>you can't even see.
+    </h1>
+    <p class="hero-sub">
+      Every manual step is a place your pipeline leaks. Take the 2-minute audit. See where the money is going.
+    </p>
+    <div class="hero-actions">
+      <a href="#audit" class="btn btn--primary">Run the audit <span class="btn__arrow">→</span></a>
+      <a href="#" class="btn btn--ghost" data-open-popup>Or get in touch</a>
+    </div>
+    <p class="hero-meta">2–3 minutes · Instant results · No sales call</p>
+  </div>
+</section>
+
+<!-- ── PROBLEM (shared) ── -->
+<section class="problem">
+  <div class="container">
+    <div class="section-head" style="text-align:center">
+      <span class="eyebrow reveal">The cost of the status quo</span>
+      <h2 class="section-title reveal reveal-d1">Most businesses are losing revenue in the same three places.</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card reveal reveal-d1">
+        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Leads go cold</h3>
+        <p>New inquiries sit for hours or days. By the time someone follows up, the deal is gone. Every missed response is money that went somewhere else.</p>
+      </div>
+      <div class="problem-card reveal reveal-d2">
+        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>No clear picture</h3>
+        <p>You don't know where leads drop off, which reps convert, or what's actually working. Decisions get made on gut feel instead of data.</p>
+      </div>
+      <div class="problem-card reveal reveal-d3">
+        <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Your team is the system</h3>
+        <p>Wasted time, unproductive staff, too many disconnected tools. Everything runs on memory and people. One busy week breaks it all.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- AUDIT -->
-  <section class="audit-section" id="audit">
-    <div class="container">
-      <div class="audit-wrapper">
+<!-- ═══════════════ SERVICES — 3 variants ═══════════════ -->
 
-        <!-- PANEL 0: GATE -->
-        <div class="audit-panel" id="panel-gate">
-          <div class="audit-panel-header">
-            <div class="audit-badge">FREE AUDIT</div>
-            <h2>Where is your business leaking revenue?</h2>
-            <p>10 questions. Instant results. A clear breakdown of your biggest gaps — and what to do about them.</p>
-          </div>
-          <form class="gate-form" id="gate-form" novalidate>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Jane Smith" autocomplete="name" required>
-              </div>
-              <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="title">Your Role</label>
-                <input type="text" id="title" name="title" placeholder="Owner, Sales Manager, Ops Lead..." required>
-              </div>
-              <div class="form-group">
-                <label for="businessName">Business Name</label>
-                <input type="text" id="businessName" name="businessName" placeholder="Your Company" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" autocomplete="email" required>
-            </div>
-            <button type="submit" class="btn-primary btn-full">
-              Start My Free Audit <span class="btn-arrow">→</span>
-            </button>
-            <p class="form-note">2–3 minutes. Your results are shown immediately — no waiting.</p>
-          </form>
-        </div>
-
-        <!-- PANEL: QUESTIONS -->
-        <div class="audit-panel audit-panel--questions hidden" id="panel-questions">
-          <div class="audit-progress">
-            <div class="progress-meta">
-              <span class="progress-label">Question <span id="q-current">1</span> of 10</span>
-              <span class="progress-pct" id="q-pct">10%</span>
-            </div>
-            <div class="progress-track">
-              <div class="progress-fill" id="progress-fill"></div>
-            </div>
-          </div>
-          <div class="question-card" id="question-card">
-            <p class="question-category" id="q-category"></p>
-            <h3 class="question-text" id="q-text"></h3>
-            <div class="answer-grid" id="answer-grid"></div>
-          </div>
-          <div class="question-nav">
-            <button class="btn-ghost" id="btn-back">← Back</button>
-            <button class="btn-primary btn-next" id="btn-next" disabled>Next →</button>
-          </div>
-        </div>
-
-        <!-- PANEL: RESULTS -->
-        <div class="audit-panel audit-panel--results hidden" id="panel-results">
-
-          <div class="results-header">
-            <div class="audit-badge">YOUR RESULTS</div>
-            <h2 id="results-headline">Business Systems Audit</h2>
-            <p class="results-sub" id="results-sub"></p>
-          </div>
-
-          <div class="score-row">
-            <div class="score-ring-wrap">
-              <div class="score-ring-visual">
-                <svg class="score-ring" viewBox="0 0 120 120" aria-hidden="true">
-                  <circle class="ring-bg" cx="60" cy="60" r="50"/>
-                  <circle class="ring-fill" id="ring-fill" cx="60" cy="60" r="50"
-                    stroke-dasharray="314.16"
-                    stroke-dashoffset="314.16"
-                    transform="rotate(-90 60 60)"/>
-                </svg>
-                <div class="ring-inner">
-                  <span class="ring-score" id="ring-score">0</span>
-                  <span class="ring-denom">/24</span>
-                </div>
-              </div>
-              <span class="ring-tier" id="ring-tier"></span>
-            </div>
-            <div class="score-detail">
-              <h3 class="score-title" id="score-title"></h3>
-              <p class="score-body" id="score-body"></p>
-              <div class="category-bars" id="category-bars"></div>
-            </div>
-          </div>
-
-          <div class="results-block">
-            <h3 class="block-title">
-              <span class="block-title-icon">
-                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.645-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
-              </span>
-              Top Revenue Leaks Identified
-            </h3>
-            <div class="leaks-grid" id="leaks-grid"></div>
-          </div>
-
-          <div class="results-block results-two-col">
-            <div>
-              <h3 class="block-title">
-                <span class="block-title-icon">
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
-                </span>
-                Quick Wins
-              </h3>
-              <ul class="wins-list" id="wins-list"></ul>
-            </div>
-            <div>
-              <h3 class="block-title">
-                <span class="block-title-icon">
-                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/></svg>
-                </span>
-                Opportunities
-              </h3>
-              <ul class="opps-list" id="opps-list"></ul>
-            </div>
-          </div>
-
-          <div class="results-cta">
-            <div class="cta-inner">
-              <div class="audit-badge">WHAT COMES NEXT</div>
-              <h3>Your Systems Improvement Game Plan is on its way.</h3>
-              <p>We'll reach out to walk through a detailed business audit and custom implementation plan showing exactly what to fix, in what order, and what it's worth to your business.</p>
-              <div class="cta-deliverable">
-                <p class="deliverable-label">What's included in your Game Plan:</p>
-                <ul>
-                  <li>Priority fix list based on your biggest leaks</li>
-                  <li>Recommended approach for each gap</li>
-                  <li>Estimated time and revenue impact</li>
-                  <li>A clear starting point, no overwhelm</li>
-                </ul>
-              </div>
-              <button class="btn-download" id="btn-download-pdf">
-                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-                Download Your Report (PDF)
-              </button>
-            </div>
-          </div>
-
-        </div>
-        <!-- /panel-results -->
-
+<!-- OPERATOR services -->
+<section class="services" data-services="operator">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">What we build</span>
+      <h2 class="section-title reveal reveal-d1">Custom systems, built <em>around your workflow</em>.</h2>
+      <p class="section-sub reveal reveal-d2">No subscriptions. No vendor lock-in. You own every system we ship.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-d1">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></div>
+        <h3>CRM automation</h3>
+        <p>GoHighLevel, HubSpot, and custom pipelines wired end-to-end. Every lead lands where it should, every time.</p>
       </div>
-      <!-- /audit-wrapper -->
+      <div class="service-card reveal reveal-d2">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="11" r="2.5"/><path d="M7 17c.5-2 2.5-3 5-3s4.5 1 5 3"/></svg></div>
+        <h3>AI agents</h3>
+        <p>Custom agents that qualify leads, answer questions, and handle follow-up. Trained on your terminology and playbook.</p>
+      </div>
+      <div class="service-card reveal reveal-d3">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M5 12H2M22 12h-3M6.3 6.3 4.2 4.2M19.8 19.8l-2.1-2.1M17.7 6.3l2.1-2.1M4.2 19.8l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+        <h3>Custom application development</h3>
+        <p>Internal tools, client portals, operational dashboards. Built for your exact workflow, not a template.</p>
+      </div>
+      <div class="service-card reveal reveal-d1">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18l6-6-6-6"/><path d="M13 18h8"/><circle cx="16" cy="6" r="2.5"/></svg></div>
+        <h3>Sales automation</h3>
+        <p>Lead scoring, routing, sequencing, and reporting. Your best rep's process turned into a repeatable system.</p>
+      </div>
+      <div class="service-card reveal reveal-d2">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v4H4zM4 10h16v4H4zM4 16h16v4H4z"/><circle cx="8" cy="6" r="1"/><circle cx="8" cy="12" r="1"/><circle cx="8" cy="18" r="1"/></svg></div>
+        <h3>Operational systems</h3>
+        <p>Onboarding, scheduling, fulfillment, retention. The back-office plumbing that keeps your team out of spreadsheets.</p>
+      </div>
+      <div class="service-card reveal reveal-d3">
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.2L12 16.8l-5.5 2.7 1-6.2L3 8.9 9 8z"/></svg></div>
+        <h3>Ongoing support</h3>
+        <p>Optional retainer to tune, expand, and maintain the systems we build as your business changes.</p>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <img src="images/logo.png" alt="Jeal.AI" class="footer-logo">
-      <p class="footer-tagline">Your Business on Autopilot</p>
-      <p class="footer-copy">&copy; <span id="footer-year"></span> Jeal.AI. All rights reserved.</p>
+<!-- CIRCUIT services -->
+<section class="services hidden" data-services="circuit">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Five systems. One operator.</span>
+      <h2 class="section-title reveal reveal-d1">We build the <em>connective tissue</em> your business is missing.</h2>
     </div>
-  </footer>
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-index">01 / CRM</div><div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="19" cy="17" r="2"/></svg></div><h3>CRM automation</h3><p>GoHighLevel, HubSpot, and custom pipelines. Every lead routed, tagged, and followed up on automatically.</p></div>
+      <div class="service-card reveal"><div class="service-index">02 / AGENTS</div><div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="11" r="2.5"/><path d="M7 17c.5-2 2.5-3 5-3s4.5 1 5 3"/></svg></div><h3>AI agents</h3><p>Custom agents that qualify, answer, and follow up. Trained on your terminology and intake playbook.</p></div>
+      <div class="service-card reveal"><div class="service-index">03 / BUILD</div><div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/><path d="m16 3 5 5-9 9H7v-5z"/></svg></div><h3>Custom apps</h3><p>Internal tools, portals, dashboards. Built to your exact workflow, not a template.</p></div>
+      <div class="service-card reveal"><div class="service-index">04 / SALES</div><div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-7"/></svg></div><h3>Sales automation</h3><p>Scoring, routing, sequencing, reporting. Your best rep's process, turned into a system.</p></div>
+      <div class="service-card reveal"><div class="service-index">05 / OPS</div><div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></div><h3>Operational systems</h3><p>Onboarding, scheduling, fulfillment. The plumbing that keeps your team out of spreadsheets.</p></div>
+      <div class="service-card reveal"><div class="service-index">06 / TUNING</div><div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l3 6 6 .9-4.5 4.4 1 6.2L12 16.8l-5.5 2.7 1-6.2L3 8.9 9 8z"/></svg></div><h3>Ongoing tuning</h3><p>Retainer to expand, optimize, and maintain as your business grows.</p></div>
+    </div>
+  </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- VOLTAGE services -->
+<section class="services hidden" data-services="voltage">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">What we build</span>
+      <h2 class="section-title reveal reveal-d1">Custom systems, shipped in <em>weeks</em>.</h2>
+    </div>
+    <div class="services-stack">
+      <div class="service-row reveal"><div class="service-num">01</div><div class="service-title">CRM automation</div><div class="service-desc">GoHighLevel, HubSpot, and custom pipelines wired end-to-end.</div><svg class="service-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      <div class="service-row reveal"><div class="service-num">02</div><div class="service-title">AI agents</div><div class="service-desc">Qualify, answer, follow up. Trained on your playbook.</div><svg class="service-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      <div class="service-row reveal"><div class="service-num">03</div><div class="service-title">Custom application development</div><div class="service-desc">Internal tools, client portals, dashboards. Built for you.</div><svg class="service-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      <div class="service-row reveal"><div class="service-num">04</div><div class="service-title">Sales automation</div><div class="service-desc">Lead scoring, routing, sequencing, reporting.</div><svg class="service-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+      <div class="service-row reveal"><div class="service-num">05</div><div class="service-title">Operational systems</div><div class="service-desc">Onboarding, scheduling, fulfillment, retention plumbing.</div><svg class="service-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AUDIT ── -->
+<section class="audit-section" id="audit">
+  <div class="container">
+    <div class="audit-wrapper">
+
+      <!-- PANEL 0: GATE -->
+      <div class="audit-panel" id="panel-gate">
+        <div class="audit-panel-header">
+          <div class="audit-badge">Free audit</div>
+          <h2>Where is your business leaking revenue?</h2>
+          <p>10 questions. Instant results. A clear breakdown of your biggest gaps, and what to do about them.</p>
+        </div>
+        <form class="gate-form" id="gate-form" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="fullName">Full name</label><input type="text" id="fullName" name="fullName" placeholder="Jane Smith" autocomplete="name" required></div>
+            <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="title">Your role</label><input type="text" id="title" name="title" placeholder="Owner, Sales Manager..." required></div>
+            <div class="form-group"><label for="businessName">Business name</label><input type="text" id="businessName" name="businessName" placeholder="Your Company" required></div>
+          </div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@yourbusiness.com" autocomplete="email" required></div>
+          <button type="submit" class="btn btn--primary btn--full">Start my free audit <span class="btn__arrow">→</span></button>
+          <p class="form-note">2–3 minutes. Results shown immediately, no waiting.</p>
+        </form>
+      </div>
+
+      <!-- PANEL: QUESTIONS -->
+      <div class="audit-panel hidden" id="panel-questions">
+        <div class="audit-progress">
+          <div class="progress-meta"><span class="progress-label">Question <span id="q-current">1</span> of 10</span><span class="progress-pct" id="q-pct">10%</span></div>
+          <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        </div>
+        <div class="question-card" id="question-card">
+          <p class="question-category" id="q-category"></p>
+          <h3 class="question-text" id="q-text"></h3>
+          <div class="answer-grid" id="answer-grid"></div>
+        </div>
+        <div class="question-nav">
+          <button class="btn btn--ghost" id="btn-back">← Back</button>
+          <button class="btn btn--primary" id="btn-next" disabled>Next <span class="btn__arrow">→</span></button>
+        </div>
+      </div>
+
+      <!-- PANEL: RESULTS -->
+      <div class="audit-panel audit-panel--results hidden" id="panel-results">
+        <div class="results-header">
+          <div class="audit-badge">Your results</div>
+          <h2 id="results-headline">Business Systems Audit</h2>
+          <p class="results-sub" id="results-sub"></p>
+        </div>
+        <div class="score-row">
+          <div class="score-ring-wrap">
+            <div class="score-ring-visual">
+              <svg class="score-ring" viewBox="0 0 120 120">
+                <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                <circle class="ring-fill" id="ring-fill" cx="60" cy="60" r="50" stroke-dasharray="314.16" stroke-dashoffset="314.16" transform="rotate(-90 60 60)"/>
+              </svg>
+              <div class="ring-inner"><span class="ring-score" id="ring-score">0</span><span class="ring-denom">/24</span></div>
+            </div>
+            <span class="ring-tier" id="ring-tier"></span>
+          </div>
+          <div class="score-detail">
+            <h3 class="score-title" id="score-title"></h3>
+            <p class="score-body" id="score-body"></p>
+            <div class="category-bars" id="category-bars"></div>
+          </div>
+        </div>
+        <div class="results-block">
+          <h3 class="block-title"><span class="block-title-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.645-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg></span>Top revenue leaks identified</h3>
+          <div class="leaks-grid" id="leaks-grid"></div>
+        </div>
+        <div class="results-block results-two-col">
+          <div>
+            <h3 class="block-title"><span class="block-title-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg></span>Quick wins</h3>
+            <ul class="wins-list" id="wins-list"></ul>
+          </div>
+          <div>
+            <h3 class="block-title"><span class="block-title-icon"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/></svg></span>Opportunities</h3>
+            <ul class="opps-list" id="opps-list"></ul>
+          </div>
+        </div>
+        <div class="results-cta">
+          <div class="cta-inner">
+            <div class="audit-badge">What comes next</div>
+            <h3>Your Systems Improvement Game Plan is on its way.</h3>
+            <p>We'll reach out to walk through a detailed business audit and custom implementation plan showing exactly what to fix, in what order, and what it's worth to your business.</p>
+            <div class="cta-deliverable">
+              <p class="deliverable-label">What's included</p>
+              <ul>
+                <li>Priority fix list based on your biggest leaks</li>
+                <li>Recommended approach for each gap</li>
+                <li>Estimated time and revenue impact</li>
+                <li>A clear starting point, no overwhelm</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- subtle get-in-touch -->
+  <div class="touch-strip">
+    Not ready for the audit? <a href="#" data-open-popup>Get in touch instead</a>.
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+  <div class="container">
+    <img src="images/logo.png" alt="Jeal.AI" class="footer-logo">
+    <p class="footer-tagline">Your Business on Autopilot</p>
+    <p class="footer-copy">© <span id="footer-year"></span> Jeal.AI. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ── POPUP ── -->
+<div class="popup-overlay" id="popup-overlay" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+  <div class="popup" id="popup">
+    <button class="popup-close" data-close-popup aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+    </button>
+    <div id="popup-body">
+      <h3 id="popup-title">Get in touch</h3>
+      <p class="popup-sub">Tell us a bit about your business and what you're trying to fix. We'll follow up within one business day.</p>
+      <form id="popup-form" novalidate>
+        <div class="form-group"><label for="p_name">Your name</label><input type="text" id="p_name" placeholder="Jane Smith" required></div>
+        <div class="form-group"><label for="p_email">Email</label><input type="email" id="p_email" placeholder="you@yourbusiness.com" required></div>
+        <div class="form-group"><label for="p_phone">Phone</label><input type="tel" id="p_phone" placeholder="(555) 000-0000" required></div>
+        <div class="form-group"><label for="p_business">Business</label><input type="text" id="p_business" placeholder="Your Company" required></div>
+        <div class="form-group"><label for="p_message">What can we help with?</label><textarea id="p_message" rows="3" placeholder="e.g. Our leads go cold, we need better follow-up..." required></textarea></div>
+        <button type="submit" class="btn btn--primary btn--full">Send message <span class="btn__arrow">→</span></button>
+        <p class="form-note">We'll follow up within one business day.</p>
+      </form>
+    </div>
+    <div id="popup-success" class="popup-success hidden">
+      <div class="popup-success-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3>Got it.</h3>
+      <p>We'll follow up within one business day.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── TWEAKS PANEL ── -->
+<div id="tweaks" class="hidden" style="position:fixed;bottom:20px;right:20px;z-index:300;background:rgba(5,10,16,0.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--border-mid);border-radius:14px;padding:16px;width:240px;box-shadow:0 20px 40px rgba(0,0,0,0.6);font-family:var(--font-body)">
+  <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--jeal-cyan);margin-bottom:4px">Tweaks</div>
+  <div style="font-size:13px;font-weight:600;color:#fff;margin-bottom:4px">Design variation</div>
+  <div style="font-size:11px;color:var(--text-dim);margin-bottom:12px">Currently: <span id="tweak-variant-name" style="color:var(--jeal-sky);text-transform:capitalize">operator</span></div>
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <button data-set-variant="operator" style="text-align:left;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s">
+      <div>Operator <span style="color:var(--text-dim);font-weight:400">· calm, credible</span></div>
+    </button>
+    <button data-set-variant="circuit" style="text-align:left;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s">
+      <div>Circuit <span style="color:var(--text-dim);font-weight:400">· technical</span></div>
+    </button>
+    <button data-set-variant="voltage" style="text-align:left;padding:10px 12px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:#fff;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s">
+      <div>Voltage <span style="color:var(--text-dim);font-weight:400">· bold, serif</span></div>
+    </button>
+  </div>
+</div>
+
+<script src="js/audit-data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
