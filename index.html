@@ -3,250 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jeal.AI -- Your Business on Autopilot</title>
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/styles.css">
+  <title>Free Business Systems Audit | Jeal.AI</title>
+  <meta name="description" content="Uncover the hidden leaks costing your business revenue. Free 2-minute diagnostic with instant results.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
         <img src="images/logo.png" alt="Jeal.AI" class="logo-img">
       </a>
-
-      <div class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#contact" class="nav-cta">Get In Touch</a>
-      </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#services" class="mobile-link">Services</a>
-      <a href="#contact" class="mobile-cta">Get In Touch</a>
+      <a href="#audit" class="nav-audit-cta">Run Free Audit</a>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="hero" id="hero">
-    <!-- Background -->
     <div class="hero-bg">
       <div class="hero-grid"></div>
-      <div class="glow glow-tl"></div>
-      <div class="glow glow-br"></div>
-      <div class="glow glow-center"></div>
+      <div class="hero-glow hero-glow--1"></div>
+      <div class="hero-glow hero-glow--2"></div>
+      <div class="hero-glow hero-glow--3"></div>
     </div>
-
-    <!-- Content -->
     <div class="hero-content">
-      <div class="hero-badge">AI + Automation Agency</div>
-
-      <h1 class="hero-headline">
-        <span class="hero-static">Custom Solutions For</span>
-        <span class="hero-rotator" id="rotator" aria-live="polite"></span>
+      <div class="hero-badge reveal">FREE BUSINESS AUDIT</div>
+      <h1 class="hero-headline reveal reveal-delay-1">
+        Uncover the Hidden Leaks<br>Costing Your Business<br><span id="rotating-word" class="rotating-word">Revenue</span>
       </h1>
-
-      <p class="hero-sub">AI agents, automations, and integrations built for your specific workflow -- not a generic template.</p>
-
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">
-          Get Started
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 12H19"/><path d="M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
-
-      <p class="hero-tagline">Your Business on Autopilot</p>
+      <p class="hero-sub reveal reveal-delay-2">
+        Get a clear breakdown of where leads, sales, and operations are leaking<br>plus fixes you can use today.
+      </p>
+      <a href="#audit" class="btn-primary reveal reveal-delay-3">
+        Run My Free Audit <span class="btn-arrow">→</span>
+      </a>
+      <p class="hero-meta reveal reveal-delay-3">2–3 minutes &nbsp;·&nbsp; Results shown instantly &nbsp;·&nbsp; No sales call required</p>
     </div>
   </section>
 
-  <!-- ===== PROBLEM ===== -->
+  <!-- PROBLEM -->
   <section class="problem" id="problem">
-    <div class="section-inner">
-      <p class="section-label reveal">01 / The Problem</p>
-      <h2 class="section-heading reveal reveal-delay-1">Most businesses are still doing things manually.</h2>
+    <div class="container">
+      <div class="section-label reveal">THE COST OF THE STATUS QUO</div>
+      <h2 class="section-title reveal reveal-delay-1">Most businesses are losing revenue<br>in the same three places</h2>
       <div class="problem-grid">
-
         <div class="problem-card reveal reveal-delay-1">
           <div class="problem-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
           </div>
-          <h3 class="problem-card-title">Slow follow-up</h3>
-          <p class="problem-card-text">Leads come in and sit there. By the time someone follows up, they've already moved on.</p>
+          <h3>Leads go cold</h3>
+          <p>New inquiries sit for hours or days. By the time someone follows up, the deal is gone. Every missed response is money that went somewhere else.</p>
         </div>
-
         <div class="problem-card reveal reveal-delay-2">
           <div class="problem-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="17 1 21 5 17 9"/>
-              <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
-              <polyline points="7 23 3 19 7 15"/>
-              <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/>
             </svg>
           </div>
-          <h3 class="problem-card-title">Repetitive manual work</h3>
-          <p class="problem-card-text">Your team spends hours on tasks that should run automatically every single week.</p>
+          <h3>No clear picture</h3>
+          <p>You don't know where leads drop off, which reps convert, or what's actually working. Decisions get made on gut feel instead of data.</p>
         </div>
-
         <div class="problem-card reveal reveal-delay-3">
           <div class="problem-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-              <line x1="9" y1="9" x2="15" y2="15"/>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
             </svg>
           </div>
-          <h3 class="problem-card-title">Disconnected tools</h3>
-          <p class="problem-card-text">You're using multiple platforms and manually moving data between all of them.</p>
+          <h3>Your team is the system</h3>
+          <p>Wasted time, unproductive staff, and too many disconnected tools. Everything runs on memory and people. One busy week breaks everything.</p>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
-  <section class="services" id="services">
-    <div class="section-inner">
-      <p class="section-label reveal">02 / What We Build</p>
-      <h2 class="section-heading reveal reveal-delay-1">AI and automation built for your business.</h2>
-      <div class="services-grid">
+  <!-- AUDIT -->
+  <section class="audit-section" id="audit">
+    <div class="container">
+      <div class="audit-wrapper">
 
-        <div class="service-card reveal reveal-delay-1">
-          <div class="service-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="4" y="4" width="16" height="16" rx="2"/>
-              <rect x="9" y="9" width="6" height="6"/>
-              <line x1="9" y1="1" x2="9" y2="4"/>
-              <line x1="15" y1="1" x2="15" y2="4"/>
-              <line x1="9" y1="20" x2="9" y2="23"/>
-              <line x1="15" y1="20" x2="15" y2="23"/>
-              <line x1="20" y1="9" x2="23" y2="9"/>
-              <line x1="20" y1="14" x2="23" y2="14"/>
-              <line x1="1" y1="9" x2="4" y2="9"/>
-              <line x1="1" y1="14" x2="4" y2="14"/>
-            </svg>
+        <!-- PANEL 0: GATE -->
+        <div class="audit-panel" id="panel-gate">
+          <div class="audit-panel-header">
+            <div class="audit-badge">FREE AUDIT</div>
+            <h2>Where is your business leaking revenue?</h2>
+            <p>10 questions. Instant results. A clear breakdown of your biggest gaps — and what to do about them.</p>
           </div>
-          <h3 class="service-title">AI Agent Builds</h3>
-          <p class="service-text">An AI agent built for your specific workflow. Handles the tasks your team shouldn't have to think about.</p>
-        </div>
-
-        <div class="service-card reveal reveal-delay-2">
-          <div class="service-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="18" cy="5" r="3"/>
-              <circle cx="6" cy="12" r="3"/>
-              <circle cx="18" cy="19" r="3"/>
-              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-            </svg>
-          </div>
-          <h3 class="service-title">CRM and Automation</h3>
-          <p class="service-text">GoHighLevel and n8n configured for your business. Pipelines that move leads and follow-up that runs without lifting a finger.</p>
-        </div>
-
-        <div class="service-card reveal reveal-delay-3">
-          <div class="service-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-            </svg>
-          </div>
-          <h3 class="service-title">Custom Integrations</h3>
-          <p class="service-text">Your existing tools, connected. No more copying data between platforms manually.</p>
-        </div>
-
-        <div class="service-card reveal reveal-delay-4">
-          <div class="service-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h3 class="service-title">Monthly Retainer</h3>
-          <p class="service-text">Ongoing management, improvements, and new builds as your business grows. Your automation keeps working and keeps getting better.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section class="contact" id="contact">
-    <div class="section-inner contact-inner">
-
-      <div class="contact-left">
-        <p class="section-label reveal">03 / Get In Touch</p>
-        <h2 class="section-heading contact-heading reveal reveal-delay-1">Ready to put your business on autopilot?</h2>
-        <p class="contact-subtext reveal reveal-delay-2">Fill out the form and you'll hear back within one business day.</p>
-        <div class="contact-details reveal reveal-delay-3">
-          <div class="contact-detail">
-            <span class="contact-detail-label">Response time</span>
-            <span class="contact-detail-value">Within 24 hours</span>
-          </div>
-          <div class="contact-detail">
-            <span class="contact-detail-label">First call</span>
-            <span class="contact-detail-value">Free, no obligation</span>
-          </div>
-          <div class="contact-detail">
-            <span class="contact-detail-label">Engagement type</span>
-            <span class="contact-detail-value">Project or retainer</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-right">
-        <!-- Replace this form block with your GoHighLevel form embed -->
-        <form class="contact-form reveal reveal-delay-2" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="Your name" autocomplete="name">
+          <form class="gate-form" id="gate-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Jane Smith" autocomplete="name" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="title">Your Role</label>
+                <input type="text" id="title" name="title" placeholder="Owner, Sales Manager, Ops Lead..." required>
+              </div>
+              <div class="form-group">
+                <label for="businessName">Business Name</label>
+                <input type="text" id="businessName" name="businessName" placeholder="Your Company" required>
+              </div>
             </div>
             <div class="form-group">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" autocomplete="email">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@yourbusiness.com" autocomplete="email" required>
+            </div>
+            <button type="submit" class="btn-primary btn-full">
+              Start My Free Audit <span class="btn-arrow">→</span>
+            </button>
+            <p class="form-note">2–3 minutes. Your results are shown immediately — no waiting.</p>
+          </form>
+        </div>
+
+        <!-- PANEL: QUESTIONS -->
+        <div class="audit-panel audit-panel--questions hidden" id="panel-questions">
+          <div class="audit-progress">
+            <div class="progress-meta">
+              <span class="progress-label">Question <span id="q-current">1</span> of 10</span>
+              <span class="progress-pct" id="q-pct">10%</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="progress-fill"></div>
             </div>
           </div>
-          <div class="form-group">
-            <label for="business" class="form-label">Business name</label>
-            <input type="text" id="business" name="business" class="form-input" placeholder="Your business" autocomplete="organization">
+          <div class="question-card" id="question-card">
+            <p class="question-category" id="q-category"></p>
+            <h3 class="question-text" id="q-text"></h3>
+            <div class="answer-grid" id="answer-grid"></div>
           </div>
-          <div class="form-group">
-            <label for="message" class="form-label">What do you need help with?</label>
-            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Tell me about your business and what you're trying to automate."></textarea>
+          <div class="question-nav">
+            <button class="btn-ghost" id="btn-back">← Back</button>
+            <button class="btn-primary btn-next" id="btn-next" disabled>Next →</button>
           </div>
-          <button type="submit" class="btn-submit">
-            Send Message
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12H19"/><path d="M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </form>
-        <!-- End GHL embed zone -->
-      </div>
+        </div>
 
+        <!-- PANEL: RESULTS -->
+        <div class="audit-panel audit-panel--results hidden" id="panel-results">
+
+          <div class="results-header">
+            <div class="audit-badge">YOUR RESULTS</div>
+            <h2 id="results-headline">Business Systems Audit</h2>
+            <p class="results-sub" id="results-sub"></p>
+          </div>
+
+          <div class="score-row">
+            <div class="score-ring-wrap">
+              <div class="score-ring-visual">
+                <svg class="score-ring" viewBox="0 0 120 120" aria-hidden="true">
+                  <circle class="ring-bg" cx="60" cy="60" r="50"/>
+                  <circle class="ring-fill" id="ring-fill" cx="60" cy="60" r="50"
+                    stroke-dasharray="314.16"
+                    stroke-dashoffset="314.16"
+                    transform="rotate(-90 60 60)"/>
+                </svg>
+                <div class="ring-inner">
+                  <span class="ring-score" id="ring-score">0</span>
+                  <span class="ring-denom">/24</span>
+                </div>
+              </div>
+              <span class="ring-tier" id="ring-tier"></span>
+            </div>
+            <div class="score-detail">
+              <h3 class="score-title" id="score-title"></h3>
+              <p class="score-body" id="score-body"></p>
+              <div class="category-bars" id="category-bars"></div>
+            </div>
+          </div>
+
+          <div class="results-block">
+            <h3 class="block-title">
+              <span class="block-title-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.645-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/></svg>
+              </span>
+              Top Revenue Leaks Identified
+            </h3>
+            <div class="leaks-grid" id="leaks-grid"></div>
+          </div>
+
+          <div class="results-block results-two-col">
+            <div>
+              <h3 class="block-title">
+                <span class="block-title-icon">
+                  <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg>
+                </span>
+                Quick Wins
+              </h3>
+              <ul class="wins-list" id="wins-list"></ul>
+            </div>
+            <div>
+              <h3 class="block-title">
+                <span class="block-title-icon">
+                  <svg viewBox="0 0 20 20" fill="currentColor"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/></svg>
+                </span>
+                Opportunities
+              </h3>
+              <ul class="opps-list" id="opps-list"></ul>
+            </div>
+          </div>
+
+          <div class="results-cta">
+            <div class="cta-inner">
+              <div class="audit-badge">WHAT COMES NEXT</div>
+              <h3>Your Systems Improvement Game Plan is on its way.</h3>
+              <p>We'll reach out to walk through a detailed business audit and custom implementation plan showing exactly what to fix, in what order, and what it's worth to your business.</p>
+              <div class="cta-deliverable">
+                <p class="deliverable-label">What's included in your Game Plan:</p>
+                <ul>
+                  <li>Priority fix list based on your biggest leaks</li>
+                  <li>Recommended approach for each gap</li>
+                  <li>Estimated time and revenue impact</li>
+                  <li>A clear starting point, no overwhelm</li>
+                </ul>
+              </div>
+              <button class="btn-download" id="btn-download-pdf">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                Download Your Report (PDF)
+              </button>
+            </div>
+          </div>
+
+        </div>
+        <!-- /panel-results -->
+
+      </div>
+      <!-- /audit-wrapper -->
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
+    <div class="container">
       <img src="images/logo.png" alt="Jeal.AI" class="footer-logo">
       <p class="footer-tagline">Your Business on Autopilot</p>
-      <p class="footer-copy">&copy; <span id="footerYear"></span> Jeal.AI. All rights reserved.</p>
+      <p class="footer-copy">&copy; <span id="footer-year"></span> Jeal.AI. All rights reserved.</p>
     </div>
   </footer>
 
