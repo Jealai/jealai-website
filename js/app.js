@@ -3,6 +3,14 @@
   const $ = (s,p=document)=>p.querySelector(s);
   const $$ = (s,p=document)=>Array.from(p.querySelectorAll(s));
 
+  // ── GHL webhooks ──
+  const GHL_WEBHOOK_AUDIT = 'https://services.leadconnectorhq.com/hooks/OWO5inHbQebbSrnXyUp6/webhook-trigger/2a897fcd-daae-4db5-8592-c513cf782e70';
+  const GHL_WEBHOOK_CONTACT = 'https://services.leadconnectorhq.com/hooks/OWO5inHbQebbSrnXyUp6/webhook-trigger/nQqqcE39r4ibHAcv3Y0p';
+  function splitName(full){const p=full.trim().split(/\s+/);return{firstName:p[0]||'',lastName:p.slice(1).join(' ')||''}}
+  function pushToGHL(url,payload){
+    fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}).catch(()=>{});
+  }
+
   // Rotating word
   (function(){
     const el=$('#rotating-word'); if(!el) return;
@@ -58,6 +66,8 @@
     if(em.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value)){em.classList.add('input-error');valid=false}
     if(!valid) return;
     state.contact={fullName:$('#fullName').value.trim(),phone:$('#phone').value.trim(),title:$('#title').value.trim(),businessName:$('#businessName').value.trim(),email:$('#email').value.trim()};
+    const _gn=splitName(state.contact.fullName);
+    pushToGHL(GHL_WEBHOOK_AUDIT,{firstName:_gn.firstName,lastName:_gn.lastName,phone:state.contact.phone,email:state.contact.email,title:state.contact.title,businessName:state.contact.businessName,source:'Website Audit Form'});
     showPanel('questions');
     state.step=0; renderQ(0);
   });
@@ -131,6 +141,8 @@
 
   function buildResults(){
     const s=scores(); showPanel('results');
+    const _rn=splitName(state.contact.fullName);
+    pushToGHL(GHL_WEBHOOK_AUDIT,{firstName:_rn.firstName,lastName:_rn.lastName,phone:state.contact.phone,email:state.contact.email,businessName:state.contact.businessName,auditScore:s.total,auditTier:s.tier.label,auditSalesScore:s.sales,auditOpsScore:s.ops,auditMktScore:s.mkt,source:'Website Audit Results'});
     $('#results-headline').textContent=`${state.contact.businessName} — Systems Audit`;
     $('#results-sub').textContent=`Completed by ${state.contact.fullName} · ${state.contact.title}`;
     const C=2*Math.PI*50, rf=$('#ring-fill');
@@ -172,6 +184,8 @@
     const pe=$('#p_email');
     if(pe.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(pe.value)){pe.classList.add('input-error');valid=false}
     if(!valid) return;
+    const _pn=splitName($('#p_name').value.trim());
+    pushToGHL(GHL_WEBHOOK_CONTACT,{firstName:_pn.firstName,lastName:_pn.lastName,email:$('#p_email').value.trim(),phone:$('#p_phone').value.trim(),businessName:$('#p_business').value.trim(),message:$('#p_message').value.trim(),source:'Website Contact Popup'});
     popupBody.classList.add('hidden'); popupSuccess.classList.remove('hidden');
   });
 
