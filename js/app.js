@@ -109,6 +109,11 @@
     state.selectedIndex=ai;
     state.answers[q.id]={label:opt.label,score:opt.score,index:ai};
     bNext.disabled=false;
+    const isLast=qi===window.QUESTIONS.length-1;
+    setTimeout(()=>{
+      if(state.selectedIndex!==ai) return;
+      if(isLast) buildResults(); else renderQ(qi+1);
+    },420);
   }
   bNext.addEventListener('click',()=>{
     if(state.selectedIndex===null) return;
