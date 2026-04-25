@@ -74,7 +74,7 @@
 
   const qCur=$('#q-current'),qPct=$('#q-pct'),pFill=$('#progress-fill');
   const qCard=$('#question-card'),qCat=$('#q-category'),qText=$('#q-text'),aGrid=$('#answer-grid');
-  const bBack=$('#btn-back'),bNext=$('#btn-next');
+  const bBack=$('#btn-back');
 
   function renderQ(idx){
     const q=window.QUESTIONS[idx]; state.step=idx; state.selectedIndex=null;
@@ -95,10 +95,9 @@
       if(prev!==undefined){
         const pb=aGrid.querySelector(`[data-index="${prev.index}"]`);
         if(pb) pb.classList.add('selected');
-        state.selectedIndex=prev.index; bNext.disabled=false;
-      } else bNext.disabled=true;
+        state.selectedIndex=prev.index;
+      }
       bBack.style.visibility=idx===0?'hidden':'visible';
-      bNext.innerHTML=idx===window.QUESTIONS.length-1?'See My Results <span class="btn__arrow">→</span>':'Next <span class="btn__arrow">→</span>';
       qCard.classList.remove('exiting');
     },180);
   }
@@ -108,18 +107,12 @@
     aGrid.querySelector(`[data-index="${ai}"]`).classList.add('selected');
     state.selectedIndex=ai;
     state.answers[q.id]={label:opt.label,score:opt.score,index:ai};
-    bNext.disabled=false;
     const isLast=qi===window.QUESTIONS.length-1;
     setTimeout(()=>{
       if(state.selectedIndex!==ai) return;
       if(isLast) buildResults(); else renderQ(qi+1);
     },420);
   }
-  bNext.addEventListener('click',()=>{
-    if(state.selectedIndex===null) return;
-    const n=state.step+1;
-    if(n<window.QUESTIONS.length) renderQ(n); else buildResults();
-  });
   bBack.addEventListener('click',()=>{if(state.step>0) renderQ(state.step-1)});
 
   // Scoring

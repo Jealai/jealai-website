@@ -189,7 +189,7 @@ input,textarea{font:inherit}
 .answer-btn.selected .answer-letter{background:var(--jeal-cyan);border-color:var(--jeal-cyan);color:#fff}
 .answer-text{font-size:14px;font-weight:500;line-height:1.45;color:var(--text-muted);padding-top:3px;transition:color var(--ease)}
 .answer-btn:hover .answer-text, .answer-btn.selected .answer-text{color:#fff}
-.question-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.06)}
+.question-nav{display:flex;align-items:center;margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.06)}
 
 /* Results */
 .audit-panel--results{padding:36px 24px}
