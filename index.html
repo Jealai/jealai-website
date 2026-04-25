@@ -18,7 +18,7 @@
 <!-- ── NAV ── -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#top" class="nav-logo"><img src="images/logo.png" alt="Jeal.AI" width="120" height="68" style="width: 120px; height: 68px; object-fit: contain;"></a>
+    <a href="#top" class="nav-logo"><picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="Jeal.AI" width="120" height="68" style="width: 120px; height: 68px; object-fit: contain;" fetchpriority="high"></picture></a>
     <div class="nav-actions">
       <a href="#" class="nav-touch" data-open-popup>Get in touch</a>
       <a href="#audit" class="nav-cta">Run Free Audit</a>
@@ -26,6 +26,7 @@
   </div>
 </nav>
 
+<main>
 <!-- ═══════════════ HERO — 3 variants ═══════════════ -->
 
 <!-- OPERATOR -->
@@ -47,10 +48,10 @@
   </div>
   <div class="hero-inner">
     <div class="hero-eyebrow reveal"><span class="dot"></span> Free Systems Audit</div>
-    <h1 class="hero-headline reveal reveal-d1">
+    <h1 class="hero-headline">
       Find the hidden leaks<br>costing your business<br><em><span id="rotating-word">Efficiency</span></em>
     </h1>
-    <p class="hero-sub reveal reveal-d2">
+    <p class="hero-sub reveal reveal-d1">
       Get a clear breakdown of where leads, sales, and operations are slipping, plus the fixes you can use today.
     </p>
     <div class="hero-actions reveal reveal-d3">
@@ -336,10 +337,12 @@
   </div>
 </section>
 
+</main>
+
 <!-- ── FOOTER ── -->
 <footer class="footer">
   <div class="container">
-    <img src="images/logo.png" alt="Jeal.AI" class="footer-logo" width="120" height="68" loading="lazy">
+    <picture><source srcset="images/logo.webp" type="image/webp"><img src="images/logo.png" alt="Jeal.AI" class="footer-logo" width="120" height="68" loading="lazy"></picture>
     <p class="footer-tagline">Your Business on Autopilot</p>
     <p class="footer-copy">© <span id="footer-year"></span> Jeal.AI. All rights reserved.</p>
   </div>
